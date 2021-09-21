@@ -6,13 +6,14 @@ public class Main {
 
         System.out.println(elevadorShopping.qtdpessoasPresentes);
         elevadorShopping.entra(5);
+
         System.out.println(elevadorShopping.qtdpessoasPresentes);
         elevadorShopping.sai(5);
 
         elevadorShopping.sobe(7);
         System.out.println(elevadorShopping.andarAtual);
 
-        elevadorShopping.desce(5);
+        elevadorShopping.desce(1);
         System.out.println(elevadorShopping.andarAtual);
     }
 }
