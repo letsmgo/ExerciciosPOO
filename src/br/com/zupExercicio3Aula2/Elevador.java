@@ -1,8 +1,8 @@
 package br.com.zupExercicio3Aula2;
 
 public class Elevador {
-    int andarAtual = 0;
-    int totalDeAndares;
+    int andarAtual;
+    int totalDeAndares = 8;
     int capacidade;
     int qtdpessoasPresentes;
 
@@ -25,15 +25,31 @@ public class Elevador {
         }
     }
 
-    public void sai() {
+    public void sai(int qtdPessoas) {
+        int totalViajantes = qtdpessoasPresentes - qtdPessoas;
 
+        if (totalViajantes < 0) {
+            System.out.println("O elevador está vázio, não há pessoas para sair. ");
+        } else {
+            qtdpessoasPresentes = totalViajantes;
+        }
+    }
+    public void sobe(int andarDesejado) {
+
+        if (andarDesejado <= totalDeAndares){
+            andarAtual = andarDesejado;
+        } else {
+            System.out.println("Digite um valor válido de andar.");
+        }
     }
 
-    public void sobe() {
+    public void desce(int andarDesejado) {
 
-    }
-
-    public void desce() {
+        if (andarDesejado >= andarAtual){
+            System.out.println("Para descer, digite um andar abaixo do qual se encontra");
+        } else {
+            andarAtual = andarDesejado;
+        }
 
     }
 }
